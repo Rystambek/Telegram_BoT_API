@@ -6,6 +6,4 @@ def getUpdates()->dict:
     basic_url = f"https://api.telegram.org/bot{TOKEN}/getUpdates"
     response = requests.get(url=basic_url)
     data = response.json()
-    return data
-
-pprint(getUpdates())
+    return data['result']

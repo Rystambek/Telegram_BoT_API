@@ -7,12 +7,13 @@ def sendPhoto(chat_id:int, photo:str):
     Basic_url = f"https://api.telegram.org/bot{TOKEN}/sendPhoto"
     params = {
         'chat_id':chat_id,
-    }
-    fies = {
         'photo':photo
     }
+    # fies = {
+    #     'photo':photo
+    # }
 
-    response = requests.post(url= Basic_url, params=params,files=fies)
+    response = requests.post(url= Basic_url, params=params)#,files=fies)
     data = response.json()
     return data
 
